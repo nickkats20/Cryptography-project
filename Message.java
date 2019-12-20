@@ -1,19 +1,20 @@
-public class Message{
-    //fields
-    private final String plaintext;
-    private final String cyphertext;
+public class Message {
+    // fields
+    private final String message;
     private boolean isEncrypted;
-    
-    //constructors
-    public Message(String plaintext){
-        this.plaintext = plaintext;
-        this.isEncrypted = true;
+
+    // constructors
+    public Message(String message, boolean isEncrypted) {
+        this.message = message;
+        this.isEncrypted = isEncrypted;
     }
 
-    public Message(String cyphertext){
-        this.cyphertext = cyphertext;
-        this.isEncrypted = true;
+    // methods
+    public boolean getEncryptionStatus() {
+        return isEncrypted;
     }
 
-
+    public String getMessage() {
+        return message;
+    }
 }
