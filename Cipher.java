@@ -1,16 +1,17 @@
 public class Cipher {
     //fields
-    private static int shiftAmount;
+    private  int shiftAmount;
+    private Message plaintext;
 
     //constructor
-    public Cipher(int shiftAmount){
+    public Cipher(int shiftAmount, Message plaintext){
     this.shiftAmount = shiftAmount;
-
+    this.plaintext = plaintext;
     }
     
     //methods
-    public static void encrypt(int shiftAmount){
-
+    public  void encrypt(int shiftAmount, Message plaintext){
+        
         
     }
 
