@@ -17,4 +17,8 @@ public class Message {
     public String getMessage() {
         return message;
     }
+
+    public void setEncryptionStatus(boolean encryptionStatus){
+        this.isEncrypted = encryptionStatus;
+    }
 }

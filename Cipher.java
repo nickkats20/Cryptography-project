@@ -32,11 +32,11 @@ public class Cipher {
                     } else {
                         char ch = (char) (toEncrypt.charAt(i) + shiftAmount);
                         encrypted += ch;
-
                     }
                 }
 
             }
+            plaintext.setEncryptionStatus(true);
             return encrypted;
         } else {
             System.out.println("This text has already been encrypted");
@@ -65,10 +65,10 @@ public class Cipher {
                     } else {
                         char ch = (char) (toDecrypt.charAt(i) - amountShifted);
                         decrypted += ch;
-
                     }
                 }
             }
+            plaintext.setEncryptionStatus(false);
             return decrypted;
         }else{
             System.out.println("This text is not encrypted");
