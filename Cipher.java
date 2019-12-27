@@ -56,7 +56,6 @@ public class Cipher {
         }
         plaintext.setEncryptionStatus(true);
         return encrypted;
-
     }
 
     public String decrypt(int amountShifted) {
@@ -77,16 +76,13 @@ public class Cipher {
                         index += 26;
                     }
                     decrypted += plainLettersU[index];
-
                 }
             }
         } else {
             System.out.println("This text is not encrypted");
-
         }
         plaintext.setEncryptionStatus(false);
         return decrypted;
-
     }
 
     // public String encrypt(int shiftAmount) {
