@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - test",
             "request": "launch",
             "mainClass": "test",
+            "projectName": "Cryptography project_45fc5726"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test",
+            "request": "launch",
+            "mainClass": "test",
             "projectName": "Cryptography-project_55a8758f"
         }
     ]
