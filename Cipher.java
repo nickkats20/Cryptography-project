@@ -25,7 +25,6 @@ public class Cipher {
                 }
                 encrypted += plainLetters.substring(index, index + 1);
             }
-
         } else {
             System.out.println("This text has already been encrypted");
         }
