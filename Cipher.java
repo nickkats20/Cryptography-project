@@ -13,7 +13,7 @@ public class Cipher {
 
     // methods
     public Message encrypt(Message plaintext, int shiftAmount) {
-        if (plaintext.getEncryptionStatus() == false) {
+        if (!plaintext.getEncryptionStatus()) {
             String toEncrypt = new String(plaintext.getMessage());
             toEncrypt.toLowerCase();
             for (int i = 0; i < toEncrypt.length(); i++) {
@@ -28,13 +28,13 @@ public class Cipher {
         } else {
             System.out.println("This text has already been encrypted");
         }
-        Message encryptedMessage = new Message(encrypted, true);
-        System.out.println(encryptedMessage.getMessage());
-        return encryptedMessage;
+        Message ciphertext = new Message(encrypted, true);
+        System.out.println(ciphertext.getMessage());
+        return ciphertext;
     }
 
     public Message decrypt(Message plaintext, int amountShifted) {
-        if (plaintext.getEncryptionStatus() == true) {
+        if (plaintext.getEncryptionStatus()) {
             String toDecrypt = new String(plaintext.getMessage());
             for (int i = 0; i < toDecrypt.length(); i++) {
                 String letter = toDecrypt.substring(i, i + 1);
@@ -48,8 +48,8 @@ public class Cipher {
         } else {
             System.out.println("This text is not encrypted");
         }
-        Message decryptedMessage = new Message(decrypted, false);
-        System.out.println(decryptedMessage.getMessage());
-        return decryptedMessage;
+        Message uncipheredtext = new Message(decrypted, false);
+        System.out.println(uncipheredtext.getMessage());
+        return uncipheredtext;
     }
 }
