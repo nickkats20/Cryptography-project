@@ -8,7 +8,7 @@ public class Cipher {
     public Cipher() {
         encrypted = "";
         decrypted = "";
-        plainLetters = "abcdefghijklmnopqrstuvwxyz";
+        plainLetters = "abcdefghijklmnopqrstuvwxyz ";
     }
 
     // methods
@@ -23,7 +23,11 @@ public class Cipher {
                 if (index > 25) {
                     index -= 26;
                 }
-                encrypted += plainLetters.substring(index, index + 1);
+                if (letter.equals(" ")) {
+                    encrypted += " ";
+                } else {
+                    encrypted += plainLetters.substring(index, index + 1);
+                }
             }
         } else {
             System.out.println("This text has already been encrypted");
@@ -43,13 +47,17 @@ public class Cipher {
                 if (index < 0) {
                     index += 26;
                 }
-                decrypted += plainLetters.substring(index, index + 1);
+                if (letter.equals(" ")) {
+                    decrypted += " ";
+                } else {
+                    decrypted += plainLetters.substring(index, index + 1);
+                }
             }
         } else {
             System.out.println("This text is not encrypted");
         }
-        Message uncipheredtext = new Message(decrypted, false);
-        System.out.println(uncipheredtext.getMessage());
-        return uncipheredtext;
+        Message decipheredtext = new Message(decrypted, false);
+        System.out.println(decipheredtext.getMessage());
+        return decipheredtext;
     }
 }
