@@ -8,7 +8,7 @@ public class Cipher {
     public Cipher() {
         encrypted = "";
         decrypted = "";
-        plainLetters = "abcdefghijklmnopqrstuvwxyz ";
+        plainLetters = "abcdefghijklmnopqrstuvwxyz";
     }
 
     // methods
