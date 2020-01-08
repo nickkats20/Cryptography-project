@@ -4,6 +4,6 @@ public class test {
         System.out.println(m1.getMessage());
         System.out.println(m1.getEncryptionStatus());
         Cipher c1 = new Cipher();
-        System.out.println(c1.encrypt(m1, 3));
+        System.out.println(c1.encrypt(m1, 3).getMessage());
     }
 }

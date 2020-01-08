@@ -33,7 +33,6 @@ public class Cipher {
             System.out.println("This text has already been encrypted");
         }
         Message ciphertext = new Message(encrypted, true);
-        System.out.println(ciphertext.getMessage());
         return ciphertext;
     }
 
@@ -57,7 +56,6 @@ public class Cipher {
             System.out.println("This text is not encrypted");
         }
         Message decipheredtext = new Message(decrypted, false);
-        System.out.println(decipheredtext.getMessage());
         return decipheredtext;
     }
 }
