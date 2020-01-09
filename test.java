@@ -5,7 +5,7 @@ public class test {
         System.out.println(m1.getMessage());
         System.out.println(m1.getEncryptionStatus());
         Cipher c1 = new Cipher();
-        System.out.println(c1.encrypt(m1, 3).getMessage());
+        System.out.println(c1.encrypt(m1).getMessage());
        
         System.out.println("********************");
 
@@ -14,6 +14,6 @@ public class test {
         System.out.println(m2.getMessage());
         System.out.println(m2.getEncryptionStatus());
         Cipher c2 = new Cipher();
-        System.out.println(c2.decrypt(m2, 3).getMessage());
+        System.out.println(c2.decrypt(m2).getMessage());
     }
 }
